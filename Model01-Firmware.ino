@@ -77,6 +77,8 @@
 
 // dual-use
 #include "Kaleidoscope-Qukeys.h"
+#include "Kaleidoscope-OneShot.h"
+#include "kaleidoscope/hid.h"
 
 /** This 'enum' is a list of all the macros used by the Model 01's firmware
   * The names aren't particularly important. What is important is that each
@@ -159,14 +161,14 @@ KEYMAPS(
    Key_Tab         , Key_Q         , Key_W                , Key_E       , Key_R , Key_T , Key_Backtick      ,
    CTL_T(Escape)   , Key_A         , Key_S                , Key_D       , Key_F , Key_G ,
    Key_LeftShift   , Key_Z         , Key_X                , Key_C       , Key_V , Key_B , Key_Tab           ,
-   Key_LeftControl , Key_Backspace , ShiftToLayer(SYMBOL) , Key_LeftGui ,
+   Key_LeftControl , Key_Backspace , ShiftToLayer(SYMBOL) , OSM(LeftGui),
    ShiftToLayer(FUNCTION),
 
    M(MACRO_ANY) , Key_6     , Key_7        , Key_8            , Key_9      , Key_0         , Key_Minus      ,
    Key_Enter    , Key_Y     , Key_U        , Key_I            , Key_O      , Key_P         , Key_Backslash  ,
                   Key_H     , Key_J        , Key_K            , Key_L      , Key_Semicolon , Key_Quote      ,
    Key_Equals   , Key_N     , Key_M        , Key_Comma        , Key_Period , Key_Slash     , Key_RightShift ,
-   Key_RightAlt , Key_Enter , Key_Spacebar , Key_RightControl ,
+   OSM(RightAlt), Key_Enter , Key_Spacebar , Key_RightControl ,
    ShiftToLayer(FUNCTION)),
 
 
@@ -416,7 +418,8 @@ KALEIDOSCOPE_INIT_PLUGINS(
   // by BIOSes) and Report (NKRO).
   USBQuirks,
 
-  Qukeys
+  Qukeys,
+  OneShot
 );
 
 /** The 'setup' function is one of the two standard Arduino sketch functions.
