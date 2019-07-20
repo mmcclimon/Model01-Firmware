@@ -217,18 +217,18 @@ KEYMAPS(
 
 
   [SYMBOL] =  KEYMAP_STACKED
-  (___, ___, ___, ___, ___, ___, ___,
-   ___, ___, ___, ___, ___, ___, ___,
-   ___, ___, ___, ___, ___, ___,
-   ___, ___, ___, ___, ___, ___, ___,
-   ___, ___, ___, ___,
-   ___,
+  (___ , Key_F1               , Key_F2            , Key_F3                , Key_F4             , Key_F5               , ___ ,
+   ___ , LSHIFT(Key_6)        , LSHIFT(Key_7)     , LSHIFT(Key_8)         , Key_Pipe           , LSHIFT(Key_Backtick) , ___ ,
+   ___ , LSHIFT(Key_1)        , LSHIFT(Key_2)     , LSHIFT(Key_3)         , LSHIFT(Key_4)      , LSHIFT(Key_5)        ,
+   ___ , ___                  , ___               , ___                   , ___                , ___                  , ___ ,
+   ___ , ___ , ___ , ___ ,
+   ___ ,
 
-   M(MACRO_VERSION_INFO),  ___, Key_7, Key_8,      Key_9,              Key_KeypadSubtract, ___,
-   ___,                    ___, Key_4, Key_5,      Key_6,              Key_KeypadAdd,      ___,
-                           ___, Key_1, Key_2,      Key_3,              Key_Equals,         ___,
-   ___,                    ___, Key_0, Key_Period, Key_KeypadMultiply, Key_KeypadDivide,   Key_Enter,
-   ___, ___, ___, ___,
+   ___ , Key_F6               , Key_F7            , Key_F8                , Key_F9             , Key_F10              , Key_F11 ,
+   ___ , Key_LeftParen        , Key_Equals        , Key_RightParen        , LSHIFT(Key_8)      , LSHIFT(Key_Equals)   , Key_F12 ,
+         Key_LeftCurlyBracket , Key_Minus         , Key_RightCurlyBracket , LSHIFT(Key_Period) , LSHIFT(Key_Comma)    , ___     ,
+   ___ , Key_LeftBracket      , LSHIFT(Key_Minus) , Key_RightBracket      , ___                , ___                  , ___     ,
+   ___ , ___ , ___ , ___ ,
    ___),
 
   [FUNCTION] =  KEYMAP_STACKED
