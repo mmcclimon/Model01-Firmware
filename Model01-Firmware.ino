@@ -216,6 +216,9 @@ void setup() {
 
   ActiveModColorEffect.highlight_color = CRGB(200, 0, 200);
 
+  OneShot.disableStickabilityForModifiers();
+  OneShot.disableStickabilityForLayers();
+
   // Use 5 layers for EEProm and Colormap
   EEPROMKeymap.setup(5);
   ColormapEffect.max_layers(5);
