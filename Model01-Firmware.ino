@@ -219,6 +219,9 @@ void setup() {
   OneShot.disableStickabilityForModifiers();
   OneShot.disableStickabilityForLayers();
 
+  Qukeys.setTimeout(185);
+  Qukeys.setReleaseDelay(20);
+
   // Use 5 layers for EEProm and Colormap
   EEPROMKeymap.setup(5);
   ColormapEffect.max_layers(5);
